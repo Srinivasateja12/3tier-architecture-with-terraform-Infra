@@ -11,14 +11,14 @@ Project Highlights
 7.	High Availability: Designed and integrated Public and Internal Load Balancers to ensure consistent availability and performance.
 
  
-# Step-by-Step Implementation
-1. Custom Images with Packer
+# Step-by-Step Implementation 
+# 1. Custom Images with Packer
   - Created two custom images:
     - Web Image: Nginx pre-installed for the web tier.
     - App Image: Tomcat pre-installed for the application tier.
   - Automated the build process using Packer templates, ensuring consistent and repeatable image creation.
   - Uploaded these images to the l-image-resource-group for use in the VMSS deployments.
-3. Infrastructure Setup
+# 2. Infrastructure Setup
 Resource Groups
 •	Purpose: Logical containers to organize resources.
 •	Implementation: Created a dedicated resource group using Terraform.
