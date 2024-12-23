@@ -19,14 +19,14 @@ Project Highlights
   - Automated the build process using Packer templates, ensuring consistent and repeatable image creation.
   - Uploaded these images to the l-image-resource-group for use in the VMSS deployments.
 # 2. Infrastructure Setup
-Resource Groups
-•	Purpose: Logical containers to organize resources.
-•	Implementation: Created a dedicated resource group using Terraform.
-Virtual Network (VNet) and Subnets
-•	VNet: Facilitates communication between resources.
-•	Subnets: 
-o	Web Subnet: Hosts the web tier components.
-o	App Subnet: Hosts the application tier components.
+- Resource Groups
+  - Purpose: Logical containers to organize resources.
+  -	Implementation: Created a dedicated resource group using Terraform.
+- Virtual Network (VNet) and Subnets
+  - VNet: Facilitates communication between resources.
+- Subnets: 
+  - Web Subnet: Hosts the web tier components.
+  - App Subnet: Hosts the application tier components.
 4. Web Tier Setup
 Public Load Balancer
 •	Purpose: Distributes incoming traffic to the web tier VMSS.
