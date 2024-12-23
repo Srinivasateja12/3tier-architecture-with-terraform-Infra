@@ -22,7 +22,9 @@ Designed and integrated Public and Internal Load Balancers to ensure consistent 
   - Created two custom images:
     - Web Image: Nginx pre-installed for the web tier.
          '''json
+      
          ttt
+      
          '''
     - App Image: Tomcat pre-installed for the application tier.
   - Automated the build process using Packer templates, ensuring consistent and repeatable image creation.
