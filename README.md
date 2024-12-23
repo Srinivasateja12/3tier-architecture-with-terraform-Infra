@@ -1,4 +1,3 @@
-# 3tier-architecture-with-terraform-Infra
 # Scalable 2-Tier Architecture on Azure using Terraform
 
 This document provides a detailed explanation of building a scalable 2-tier architecture on Azure using Terraform. The design consists of a web tier handling public requests and an application tier for backend processing. Both tiers use Virtual Machine Scale Sets (VMSS) deployed with custom images created using Packer.
