@@ -12,13 +12,13 @@ Project Highlights
 
  
 # Step-by-Step Implementation 
-# 1. Custom Images with Packer
+### 1. Custom Images with Packer
   - Created two custom images:
     - Web Image: Nginx pre-installed for the web tier.
     - App Image: Tomcat pre-installed for the application tier.
   - Automated the build process using Packer templates, ensuring consistent and repeatable image creation.
   - Uploaded these images to the l-image-resource-group for use in the VMSS deployments.
-# 2. Infrastructure Setup
+### 2. Infrastructure Setup
 - Resource Groups
   - Purpose: Logical containers to organize resources.
   -	Implementation: Created a dedicated resource group using Terraform.
@@ -27,17 +27,17 @@ Project Highlights
 - Subnets: 
   - Web Subnet: Hosts the web tier components.
   - App Subnet: Hosts the application tier components.
-4. Web Tier Setup
-Public Load Balancer
-•	Purpose: Distributes incoming traffic to the web tier VMSS.
-•	Configuration: 
-o	Public IP Address: Deployed a single public IP to provide external accessibility.
-o	Backend Pool: Contains web tier VMSS instances.
-o	Health Probes: Monitored ports 80, 22, and 8080 for availability.
-o	Rules: Configured load balancing for ports 80 (HTTP), 22 (SSH), and 8080 (application traffic).
-Network Security Group (NSG)
-•	Purpose: Ensures secure access to the web subnet.
-•	Rules: 
+### 3. Web Tier Setup
+- Public Load Balancer
+  -	Purpose: Distributes incoming traffic to the web tier VMSS.
+  -	Configuration: 
+    - Public IP Address: Deployed a single public IP to provide external accessibility.
+    -	Backend Pool: Contains web tier VMSS instances.
+    -	Health Probes: Monitored ports 80, 22, and 8080 for availability.
+    -	Rules: Configured load balancing for ports 80 (HTTP), 22 (SSH), and 8080 (application traffic).
+- Network Security Group (NSG)
+ -	Purpose: Ensures secure access to the web subnet.
+ -	Rules: 
 o	Inbound: Allowed traffic on ports 80, 22, and 8080.
 o	Outbound: Allowed traffic on ports 22 and 8080.
 Virtual Machine Scale Set (VMSS)
@@ -45,7 +45,7 @@ Virtual Machine Scale Set (VMSS)
 •	Automation: Configured using Terraform for streamlined deployment.
 •	Auto-Scaling Rules: Configured based on CPU utilization.
 •	Integration: Attached to the public load balancer backend pool for traffic distribution.
-5. Application Tier Setup
+### 4. Application Tier Setup
 Internal Load Balancer
 •	Purpose: Handles internal communication within the application tier.
 •	Configuration: 
@@ -62,5 +62,5 @@ Virtual Machine Scale Set (VMSS)
 •	Automation: Configured using Terraform for streamlined deployment.
 •	Auto-Scaling Rules: Configured based on CPU utilization.
 •	Integration: Attached to the internal load balancer backend pool.
-Summary
+## Summary
 This project demonstrates a robust and scalable 2-tier architecture on Azure. Key highlights include the automation of image creation, efficient use of public IPs, and seamless scalability with Terraform-managed VMSS. By using Terraform modules, data blocks, and variables, the infrastructure setup is efficient, reusable, and adaptable. The integration of Terraform and Packer streamlines infrastructure provisioning and management. By following this guide, viewers can replicate or adapt the setup for similar use cases.
