@@ -38,9 +38,9 @@ Project Highlights
 - Network Security Group (NSG)
  -	Purpose: Ensures secure access to the web subnet.
  -	Rules: 
-o	Inbound: Allowed traffic on ports 80, 22, and 8080.
-o	Outbound: Allowed traffic on ports 22 and 8080.
-Virtual Machine Scale Set (VMSS)
+   -	Inbound: Allowed traffic on ports 80, 22, and 8080.
+   -	Outbound: Allowed traffic on ports 22 and 8080.
+- Virtual Machine Scale Set (VMSS)
 •	Image: Used the Nginx custom image retrieved via a data block.
 •	Automation: Configured using Terraform for streamlined deployment.
 •	Auto-Scaling Rules: Configured based on CPU utilization.
