@@ -18,7 +18,7 @@ o	Web Image: Nginx pre-installed for the web tier.
 o	App Image: Tomcat pre-installed for the application tier.
 •	Automated the build process using Packer templates, ensuring consistent and repeatable image creation.
 •	Uploaded these images to the l-image-resource-group for use in the VMSS deployments.
-2. Infrastructure Setup
+3. Infrastructure Setup
 Resource Groups
 •	Purpose: Logical containers to organize resources.
 •	Implementation: Created a dedicated resource group using Terraform.
@@ -27,7 +27,7 @@ Virtual Network (VNet) and Subnets
 •	Subnets: 
 o	Web Subnet: Hosts the web tier components.
 o	App Subnet: Hosts the application tier components.
-3. Web Tier Setup
+4. Web Tier Setup
 Public Load Balancer
 •	Purpose: Distributes incoming traffic to the web tier VMSS.
 •	Configuration: 
@@ -45,7 +45,7 @@ Virtual Machine Scale Set (VMSS)
 •	Automation: Configured using Terraform for streamlined deployment.
 •	Auto-Scaling Rules: Configured based on CPU utilization.
 •	Integration: Attached to the public load balancer backend pool for traffic distribution.
-4. Application Tier Setup
+5. Application Tier Setup
 Internal Load Balancer
 •	Purpose: Handles internal communication within the application tier.
 •	Configuration: 
