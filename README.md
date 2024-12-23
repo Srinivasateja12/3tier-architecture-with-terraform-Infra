@@ -11,7 +11,7 @@ Project Highlights
 7.	High Availability: Designed and integrated Public and Internal Load Balancers to ensure consistent availability and performance.
 
  
-Step-by-Step Implementation
+# Step-by-Step Implementation
 1. Custom Images with Packer
 •	Created two custom images: 
 o	Web Image: Nginx pre-installed for the web tier.
