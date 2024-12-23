@@ -36,10 +36,10 @@ Project Highlights
     -	Health Probes: Monitored ports 80, 22, and 8080 for availability.
     -	Rules: Configured load balancing for ports 80 (HTTP), 22 (SSH), and 8080 (application traffic).
 - Network Security Group (NSG)
- -	Purpose: Ensures secure access to the web subnet.
- -	Rules: 
-   -	Inbound: Allowed traffic on ports 80, 22, and 8080.
-   -	Outbound: Allowed traffic on ports 22 and 8080.
+  -	Purpose: Ensures secure access to the web subnet.
+  -	Rules: 
+    -	Inbound: Allowed traffic on ports 80, 22, and 8080.
+    -	Outbound: Allowed traffic on ports 22 and 8080.
 - Virtual Machine Scale Set (VMSS)
 •	Image: Used the Nginx custom image retrieved via a data block.
 •	Automation: Configured using Terraform for streamlined deployment.
