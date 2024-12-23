@@ -3,12 +3,12 @@
 
 This document provides a detailed explanation of building a scalable 2-tier architecture on Azure using Terraform. The design consists of a web tier handling public requests and an application tier for backend processing. Both tiers use Virtual Machine Scale Sets (VMSS) deployed with custom images created using Packer.
 Project Highlights
-1.	Automated Image Creation: Utilized Packer to create and manage custom images for Nginx (Web Tier) and Tomcat (Application Tier), automating the image-building process.
-3.	Efficient Use of Public IPs: Deployed a single public IP to serve the Public Load Balancer, ensuring efficient and cost-effective resource usage.
-4.	Scalable Deployment with VMSS: Leveraged Terraform to provision VMSS instances in both tiers, enabling automatic scaling based on demand.
-5.	Infrastructure as Code: Developed the entire infrastructure using Terraform, employing modules, data blocks, and variables for efficient resource management and reusability.
-6.	Secure Network Configuration: Implemented Network Security Groups (NSGs) to regulate traffic for both the web and application layers.
-7.	High Availability: Designed and integrated Public and Internal Load Balancers to ensure consistent availability and performance.
+###### 1.	Automated Image Creation: Utilized Packer to create and manage custom images for Nginx (Web Tier) and Tomcat (Application Tier), automating the image-building process.
+###### 2.	Efficient Use of Public IPs: Deployed a single public IP to serve the Public Load Balancer, ensuring efficient and cost-effective resource usage.
+###### 3.	Scalable Deployment with VMSS: Leveraged Terraform to provision VMSS instances in both tiers, enabling automatic scaling based on demand.
+###### 4.	Infrastructure as Code: Developed the entire infrastructure using Terraform, employing modules, data blocks, and variables for efficient resource management and reusability.
+###### 5.	Secure Network Configuration: Implemented Network Security Groups (NSGs) to regulate traffic for both the web and application layers.
+###### 6.	High Availability: Designed and integrated Public and Internal Load Balancers to ensure consistent availability and performance.
 
  
 # Step-by-Step Implementation 
