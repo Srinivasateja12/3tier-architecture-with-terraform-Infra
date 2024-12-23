@@ -1,0 +1,10 @@
+variable "NSG-Rule-name" {}
+variable "NSG-Rule-Priority" {}
+variable "NSG-Rule-Direction" {}
+variable "NSG-Rule-Access" {}
+variable "NSG-Rule-Source-port-range" {}
+variable "NSG-Rule-Destination-port-range" {}
+variable "NSG-Rule-Source-Address-Prefix" {}
+variable "NSG-Rule-Destination-Address-Prefix" {}
+variable "NSG-Rule-Rg-name" {}
+variable "NSG-name" {}
