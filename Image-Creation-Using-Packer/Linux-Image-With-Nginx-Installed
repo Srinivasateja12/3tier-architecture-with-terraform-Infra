@@ -1,0 +1,42 @@
+#Before Creating the Prerequsites are Packer should be installed and Resoure Group be created for storing the image.
+
+{
+    "builders": [{
+      "type": "azure-arm",
+  
+      "client_id": "xxxxxx-xxxxxxxxxx-xxxxxxxxxxx-xxxxxxxx",
+      "client_secret": "xxxxxx-xxxxxxxxxx-xxxxxxxxxxx-xxxxxxxx",
+      "tenant_id": "xxxxxx-xxxxxxxxxx-xxxxxxxxxxx-xxxxxxxx",
+      "subscription_id": "xxxxxx-xxxxxxxxxx-xxxxxxxxxxx-xxxxxxxx",
+  
+      "managed_image_resource_group_name": "LinuxImage_RG",
+      "managed_image_name": "Linux_Image12",
+  
+      "os_type": "Linux",
+      "image_publisher": "canonical",
+      "image_offer": "0001-com-ubuntu-server-jammy",
+      "image_sku": "22_04-lts",
+  
+      "azure_tags": {
+          "dept": "Engineering",
+          "task": "Image deployment"
+      },
+  
+      "location": "Central India",
+      "vm_size": "Standard_B1s"
+    }],
+    "provisioners": [{
+      "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E sh '{{ .Path }}'",
+      "inline": [
+        "sudo apt-get update -y",  
+        "sudo apt-get install -y software-properties-common", 
+        "sudo apt-add-repository universe -y",  
+        "sudo apt-get update -y", 
+        "sudo apt-get -y install nginx",  
+  
+        "/usr/sbin/waagent -force -deprovision+user && export HISTSIZE=0 && sync"
+      ],
+      "inline_shebang": "/bin/sh -x",
+      "type": "shell"
+    }]
+  }
